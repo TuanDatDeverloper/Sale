@@ -1,0 +1,153 @@
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+/* -------------------Header---------------------- */
+.header-right i {
+  margin-left: 10px;
+}
+.header-right input {
+  border-radius: 999px;
+  margin-right: 10px;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+/* ---------------------------NAV--------------------------- */
+.navbar-nav .nav-item {
+  margin-right: 20px; /* Khoảng cách giữa các mục */
+}
+.navbar-nav .dropdown-menu {
+  min-width: 200px; /* Đảm bảo menu thả xuống có độ rộng tối thiểu */
+}
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.navbar-nav .nav-item {
+  text-align: center;
+}
+.navbar-nav .nav-link {
+  position: relative;
+}
+/* tạo hiệu ứng khi di chuột vào nav */
+.navbar-nav .nav-link::after {
+  content: "";
+  height: 2px;
+  left: 15%;
+  bottom: 0;
+  width: 0;
+  position: absolute;
+  background-color: tomato;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 50%;
+  transform: translateX(60%);
+}
+/* ảnh */
+.img img {
+  width: 100%;
+  height: auto;
+}
+/* --------------------------Footer------------------------------------ */
+.widget-ft {
+  padding-top: 10%;
+}
+.sum_footer {
+  color: #dfdfdf;
+  font-size: 16px;
+  margin: 27px 0 15px;
+  font-weight: 500;
+}
+.title_menu {
+  color: #4d8a54;
+  margin-bottom: 10%;
+}
+.content_contact i {
+  color: #4d8a54;
+  margin-top: 20px;
+}
+.input-group input {
+  border: none;
+  border-radius: 30px;
+  border-top-right-radius: 30px !important;
+  border-bottom-right-radius: 30px !important;
+  height: 60px;
+  color: #000;
+  padding: 0 160px 0 20px;
+  float: left;
+  width: 100%;
+  font-size: 16px;
+  z-index: 0;
+}
+.input-group-append button {
+  font-weight: bold;
+  font-size: 16px;
+  height: 60px;
+  border-radius: 30px !important;
+  background-color: #4d8a54;
+  color: #fff;
+  min-width: 151px;
+  text-transform: uppercase;
+  margin-left: -150px !important;
+  z-index: 9 !important;
+}
+.card .card-footer {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
+}
+
+.card:hover .card-footer {
+  opacity: 1;
+}
+
+.card {
+  overflow: hidden;
+}
+
+.card img {
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-body {
+  position: relative;
+}
+
+.card-body .fw-bolder,
+.card-body .text-center span {
+  visibility: visible;
+}
+
+.card:hover .card-body .fw-bolder,
+.card:hover .card-body .text-center span {
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+  .fw-bolder {
+    font-size: 14px;
+  }
+
+  .btn-outline-dark {
+    font-size: 12px;
+    padding: 5px 1px;
+  }
+
+  .text-center span {
+    font-size: 14px;
+  }
+}

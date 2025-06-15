@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font gg -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./Css/news.css" />
+    <title>Web bán hàng</title>
+  </head>
+  <body>
+  <!----------------------Đăng nhập , giỏ hàng ---------------- -->
+   <!-- Header -->
+   <header class="bg-info">
+    <div class="container" style="padding: 10px">
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- User Dropdown -->
+        <div class="dropdown">
+          <a
+            href="#"
+            class="dropdown-toggle"
+            id="userMenuLink"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fas fa-user"></i>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="userMenuLink">
+            <li>
+              <a class="dropdown-item" href="./login.html">Đăng nhập</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="./register.html">Đăng ký</a>
+            </li>
+            <li>
+              <button
+                id="logoutButton"
+                class="dropdown-item"
+                style="display: none"
+              >
+                Đăng xuất
+              </button>
+            </li>
+          </ul>
+          <span id="userLogin" style="color: black"></span>
+        </div>
+
+        <!-- Search Form -->
+        
+
+        <!-- Cart Icon -->
+        <a
+          href="#"
+          class="text-dark text-decoration-none position-relative"
+          id="cartIcon"
+        >
+          <i class="fas fa-shopping-cart"></i>
+          <span
+            id="cartItemCount"
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            >0</span
+          >
+        </a>
+      </div>
+    </div>
+  </header>
+
+    <!------------------------NAV-------------------------->
+    <div class="container-fluid bg-light">
+      <div class="container">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img
+                src="./img/logo.webp"
+                alt="Logo"
+                style="width: 100px"
+                class="rounded-pill"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsibleNavbar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./introduce.html">Giới Thiệu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./menu.html">Thực đơn</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    >Sản phẩm</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="./hottea.html">Trà Nóng</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./cake.html">Bánh ngọt</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./Smoothies.html"
+                        >SMOOTHIES</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./FruitTea.html"
+                        >Trà Hoa Quả</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./news.html">Tin Tức</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contact.html">Liên hệ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!---------------------------------------Content -------- ------------------->
+    <hr style="height: 3px; margin-top: 20px" />
+    <div class="container">
+      <p style="margin-bottom: 50px">
+        Trang chủ / <span style="color: #4d8a54">Tin Tức</span>
+      </p>
+      <div class="row">
+        <div class="left-blog col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+          <div class="row row_blog_responsive">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12 itembb">
+              <div class="itemblog_big">
+                <div class="thumb">
+                  <img src="./img/Tintuc/tt1.webp" alt="" />
+                </div>
+                <div class="content_blog">
+                  <h3>
+                    Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà
+                    phê chưa?
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12 itembb">
+              <div class="itemblog_big">
+                <div class="thumb">
+                  <img src="./img/Tintuc/tt4.webp" alt="" />
+                </div>
+                <div class="content_blog">
+                  <h3>
+                    Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà
+                    phê chưa?
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+             <!--  -->
+             <div class="col-lg-6 col-md-6 col-sm-12 col-12 itembb mt-4">
+              <div class="itemblog_big">
+                <div class="thumb">
+                  <img src="./img/Tintuc/tt3.webp" alt="" />
+                </div>
+                <div class="content_blog">
+                  <h3>
+                    Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà
+                    phê chưa?
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12 itembb mt-4">
+              <div class="itemblog_big">
+                <div class="thumb">
+                  <img src="./img/Tintuc/tt2.webp" alt="" />
+                </div>
+                <div class="content_blog">
+                  <h3>
+                    Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài
+                    sự sống
+                  </h3>
+                </div>
+              </div>
+            </div>
+           
+           
+            <!--  -->
+          </div>
+        </div>
+
+        <!--------------- right --------------->
+        <div class="right_blog col-xl-3 col-lg-3 col-md-12 col-sm-12 col-xs-12">
+          <!-- slidebar -->
+          <div class="sidebar-category">
+            <div class="aside-title">
+              <h2>DANH MỤC TIN TỨC</h2>
+              <hr style="height: 5px;background-color: #4d8a54;width: 100%;">
+            </div>
+            <div class="aside-content">
+              <nav class="nav-category navbar-toggleable-md">
+                <ul class="nav navbar-pills">
+                  <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Trang chủ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./introduce.html">Giới thiệu</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      >Sản phẩm</a
+                    >
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="./hottea.html"
+                          >Trà Nóng</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="./cake.html"
+                          >Bánh ngọt</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="./Smoothies.html"
+                          >SMOOTHIES</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="./FruitTea.html"
+                          >Trà Hoa Quả</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./news.html">Tin tức</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./menu.html">Thực đơn</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">Liên hệ</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <!-- aboutslidebar -->
+          <div class="about_slidebar" style="margin-top: 40px;">
+            <div class="aside-title">
+              <h2>VỀ CHÚNG TÔI</h2>
+              <hr style="height: 5px;background-color: #4d8a54;width: 80%;">
+            </div>
+            <div class="aside-content"></div>
+              <a href="./introduce.html"><img src="./img/Tintuc/tt7.webp" class="asi" alt=""></a>
+              <div class="about_sum" style="margin-top: 10px;">
+                <p >
+                  Tea House được sinh ra từ niềm đam mê bất tận với lá trà Việt Nam. Chúng tôi đã không ngừng mang đến những sản phẩm trà thơm ngon, sánh đượm trong không gian thoải mái và lịch sự với mức giá hợp lý. 
+                </p>
+                <a href="./introduce.html" class="btn-primary btn">Đọc tiếp</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------Footer--------------------------------------- -->
+    <footer>
+      <div
+        class="container-fluid bg-dark"
+        style="color: white; margin-top: 20px"
+      >
+        <div class="container p-5">
+          <div class="row">
+            <div class="col-4 col-lg-4 col-md-12 col-12">
+              <div class="logo_footer">
+                <img src="./img/logo.webp" alt="" />
+              </div>
+              <p class="sum_footer">
+                Chúng tôi mong muốn Tea House sẽ trở thành “Nhà Trà", nơi mọi
+                người xích lại gần nhau và tìm thấy niềm vui, sự sẻ chia thân
+                tình bên những tách cà phê đượm hương, chất lượng.
+              </p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-fix">
+              <div class="widget-ft">
+                <h4 class="title_menu">LIÊN HỆ CHÚNG TÔI</h4>
+                <div class="time_work">
+                  <div class="content_contact">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span> <b>Địa chỉ :</b>VKU </span>
+                  </div>
+                  <div class="content_contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>
+                      <b>Hotline đặt bàn: </b>
+                      1900 6750
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-fix">
+              <div class="widget-ft">
+                <h4 class="title_menu">ĐĂNG KÝ NHẬN KHUYẾN MÃI</h4>
+                <div class="time_work">
+                  <p>
+                    Đừng bỏ lỡ những sản phẩm và chương trình khuyến mãi hấp dẫn
+                  </p>
+                  <form action="">
+                    <div class="input-group">
+                      <input
+                        type="email"
+                        placeholder="Email của bạn "
+                        required
+                      />
+                      <span class="input-group-append subscribe">
+                        <button class="btn btn-success">Đăng ký</button>
+                      </span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="./Js/index.js"></script>
+</html>

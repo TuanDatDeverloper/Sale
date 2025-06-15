@@ -1,0 +1,242 @@
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.booknow1 {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+.booknow1 .title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.booknow1 .content p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+.booknow1 .form-group {
+  margin-bottom: 15px;
+}
+.booknow1 select,
+.booknow1 input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: none;
+  font-size: 1rem;
+}
+.booknow1 label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.booknow1 .btn {
+  margin-top: 20px;
+  padding: 10px 5px;
+  background-color: #4d8a54;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.booknow1 .btn:hover {
+  background-color: #3e7143;
+}
+
+/* Toast Notification */
+.booking-toast {
+  position: fixed;
+  top: 25px;
+  right: 30px;
+  border-radius: 12px;
+  background: #fff;
+  padding: 20px 35px 20px 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #4d8a54;
+  overflow: hidden;
+  transform: translateX(calc(100% + 30px));
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+  z-index: 9999;
+}
+
+.booking-toast.active {
+  transform: translateX(0%);
+}
+
+.booking-toast .toast-content {
+  display: flex;
+  align-items: center;
+}
+
+.booking-toast .toast-content .check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  background-color: #4d8a54;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.booking-toast .toast-content .message {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+
+.message .text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.message .text.text-1 {
+  font-weight: 600;
+  color: #333;
+}
+
+.booking-toast .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.booking-toast .close:hover {
+  opacity: 1;
+}
+
+.booking-toast .progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: #ddd;
+}
+
+.booking-toast .progress:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4d8a54;
+}
+
+.booking-toast.active .progress:before {
+  animation: progress 3s linear forwards;
+}
+
+@keyframes progress {
+  100% {
+    right: 100%;
+  }
+}
+
+/* Booking History Modal */
+.history-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.booking-number {
+  font-weight: 600;
+  color: #4d8a54;
+  font-size: 18px;
+}
+
+.booking-date {
+  color: #666;
+  font-size: 14px;
+}
+
+.history-content p {
+  margin: 8px 0;
+  color: #333;
+  font-size: 15px;
+}
+
+.history-content .status {
+  color: #4d8a54;
+  font-weight: 500;
+}
+
+/* View History Button */
+#viewHistoryBtn {
+  background-color: #4d8a54;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#viewHistoryBtn:hover {
+  background-color: #3a6a40;
+  transform: translateY(-2px);
+}
+
+/* Modal Styles */
+.modal-content {
+  border-radius: 15px;
+  border: none;
+}
+
+.modal-header {
+  background-color: #4d8a54;
+  color: white;
+  border-radius: 15px 15px 0 0;
+}
+
+.modal-header .btn-close {
+  color: white;
+}
+
+.modal-body {
+  padding: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .booking-toast {
+    width: 90%;
+    right: 5%;
+  }
+
+  .history-item {
+    padding: 15px;
+  }
+
+  .booking-number {
+    font-size: 16px;
+  }
+
+  .history-content p {
+    font-size: 14px;
+  }
+}

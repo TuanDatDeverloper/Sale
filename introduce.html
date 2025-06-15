@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./Css/product.css" />
+    <!-- font gg -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Web bán hàng</title>
+  </head>
+  <body>
+    <!----------------------Đăng nhập , giỏ hàng ---------------- -->
+    <!-- Header -->
+    <header class="bg-info">
+      <div class="container" style="padding: 10px">
+        <div class="d-flex justify-content-between align-items-center">
+          <!-- User Dropdown -->
+          <div class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle"
+              id="userMenuLink"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fas fa-user"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="userMenuLink">
+              <li>
+                <a class="dropdown-item" href="./login.html">Đăng nhập</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="./register.html">Đăng ký</a>
+              </li>
+              <li>
+                <button
+                  id="logoutButton"
+                  class="dropdown-item"
+                  style="display: none"
+                >
+                  Đăng xuất
+                </button>
+              </li>
+            </ul>
+            <span id="userLogin" style="color: black"></span>
+          </div>
+
+          <!-- Search Form -->
+
+          <!-- Cart Icon -->
+          <a
+            href="#"
+            class="text-dark text-decoration-none position-relative"
+            id="cartIcon"
+          >
+            <i class="fas fa-shopping-cart"></i>
+            <span
+              id="cartItemCount"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >0</span
+            >
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!------------------------NAV-------------------------->
+    <div class="container-fluid bg-light">
+      <div class="container">
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img
+                src="./img/logo.webp"
+                alt="Logo"
+                style="width: 100px"
+                class="rounded-pill"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsibleNavbar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./introduce.html">Giới Thiệu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./menu.html">Thực đơn</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    >Sản phẩm</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="./hottea.html">Trà Nóng</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./cake.html">Bánh ngọt</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./Smoothies.html"
+                        >SMOOTHIES</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./FruitTea.html"
+                        >Trà Hoa Quả</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./news.html">Tin Tức</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contact.html">Liên hệ</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!---------------------------------------Content  ------------------->
+    <hr style="height: 3px; margin-top: 20px" />
+    <div class="container">
+      <p style="margin-bottom: 50px">
+        Trang chủ / <span style="color: #4d8a54">Giới thiệu</span>
+      </p>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+          <p>
+            Tea House hiện là chuỗi cửa hàng đồ uống lớn nhất tại Việt Nam.
+            Những sản phẩm từ Tea House đang như một cơn bão rất nhanh chóng lan
+            rộng ra xung quanh những nước Châu Á. Đi đến đâu sản phẩm của Tea
+            House cũng nhận được sự yêu quý của khách hàng các nước. Đây cũng là
+            loại trà có hương vị khác biệt nhất, đủ tiêu chuẩn và là thương hiệu
+            đồ uống duy nhất để đưa vào giới thiệu tại Shanghai World Expo 2010.
+          </p>
+          <p>
+            Tea House hiện tại đã có chi nhánh cửa hàng tại Đài Loan, Nhật Bản,
+            Trung Quốc, Hồng Kong, Indonesia, Malaisia, Singapor, Việt Nam,
+            Myanma, Brunei, v.v..
+          </p>
+          <p>
+            Trong suốt quá trình phát triển của mình Tea House luôn tập trung vào
+            việc kết hợp và tạo ra những sản phẩm chất lượng cao nhất và phải
+            tạo được sự khác biệt so với những sản phẩm cùng loại trên thị
+            trường. Để làm được điều này, chỉ số chất lượng của tất cả các
+            nguyên liệu và các thành phần được sử dụng trong các sản phẩm của
+            Tea House không chỉ vượt qua được chứng nhận SGS Đài Loan mà họ cũng
+            đã vượt qua 231 bài thử nghiệm chất lượng của SGS Nhật Bản về việc
+            cấp phép nhập khẩu. Dingtea hoàn toàn không sử dụng hương liệu phụ
+            gia để bảo quản. Ngoài tính đặc trưng hơn so với các sản phẩm khác,
+            Sản phẩm của Tea House còn thể hiện văn hóa trà chuyên nghiệp, tinh
+            tế và độc đáo của người Đài Loan.
+          </p>
+          <p>
+            Để luôn có được loại trà tốt nhất, Tea House đã ký hợp đồng với
+            những nông dân ở vùng cao. Chăm sóc tại những vườn chè với nhiệt độ
+            thấp và có độ cao lên đến 1000m, cùng với việc lựa chọn tỉ mỉ một
+            đầu-hai-lá, trà đã pha không chỉ toả ra một hương vị ngọt ngào mà
+            còn có mùi thơm đặc biệt. Phần lớn các loại trà trên thị trường đều
+            có xuất xứ từ Trung Quốc, hương thơm được tăng lên thông qua việc sử
+            dụng các phụ gia, trong khi vị đắng và vị ngọt được điều chỉnh thông
+            qua các chất làm ngọt, do đó chất lượng có sự khác biệt đáng kể so
+            với sản phẩm của Tea House.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------Footer--------------------------------------- -->
+    <footer>
+      <div
+        class="container-fluid bg-dark"
+        style="color: white; margin-top: 20px"
+      >
+        <div class="container p-5">
+          <div class="row">
+            <div class="col-4 col-lg-4 col-md-12 col-12">
+              <div class="logo_footer">
+                <img src="./img/logo.webp" alt="" />
+              </div>
+              <p class="sum_footer">
+                Chúng tôi mong muốn Tea House sẽ trở thành “Nhà Trà", nơi mọi
+                người xích lại gần nhau và tìm thấy niềm vui, sự sẻ chia thân
+                tình bên những tách cà phê đượm hương, chất lượng.
+              </p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-fix">
+              <div class="widget-ft">
+                <h4 class="title_menu">LIÊN HỆ CHÚNG TÔI</h4>
+                <div class="time_work">
+                  <div class="content_contact">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span> <b>Địa chỉ :</b>VKU </span>
+                  </div>
+                  <div class="content_contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>
+                      <b>Hotline đặt bàn: </b>
+                      1900 6750
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-fix">
+              <div class="widget-ft">
+                <h4 class="title_menu">ĐĂNG KÝ NHẬN KHUYẾN MÃI</h4>
+                <div class="time_work">
+                  <p>
+                    Đừng bỏ lỡ những sản phẩm và chương trình khuyến mãi hấp dẫn
+                  </p>
+                  <form action="">
+                    <div class="input-group">
+                      <input
+                        type="email"
+                        placeholder="Email của bạn "
+                        required
+                      />
+                      <span class="input-group-append subscribe">
+                        <button class="btn btn-success">Đăng ký</button>
+                      </span>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <!-- js -->
+  <script src="./Js/index.js"></script>
+</html>
